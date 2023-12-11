@@ -1,0 +1,1 @@
+#include <iostream>#include <cmath>int main() {    int n;    double i;    scanf("%d %lf", &n, &i);    double all = 0;    for (int j = 0; j < n + 1; ++j) {        double scale = pow(1 + i, -j);        int temp;        scanf("%d", &temp);        all += temp * scale;    }    printf("%lf", all);    return 0;}
