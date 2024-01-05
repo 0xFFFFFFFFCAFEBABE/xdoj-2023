@@ -7,7 +7,9 @@ int main() {
     int odd[101];
     int evens = 0;
     int odds = 0;
-    for (int i = 0; i < n; i++) {
+    int i = 0;
+    int j = 0;
+    for (i = 0; i < n; i++) {
         int temp;
         scanf("%d", &temp);
         if (temp % 2 == 1) {
@@ -20,8 +22,8 @@ int main() {
     }
 
     //sort
-    for (int i = 0; i < evens - 1; i++) {
-        for (int j = 0; j < evens - 1 - i; j++) {
+    for (i = 0; i < evens - 1; i++) {
+        for (j = 0; j < evens - 1 - i; j++) {
             if (even[j + 1] > even[j]) {
                 even[j + 1] ^= even[j];
                 even[j] ^= even[j + 1];
@@ -29,8 +31,8 @@ int main() {
             }
         }
     }
-    for (int i = 0; i < odds - 1; i++) {
-        for (int j = 0; j < odds - 1 - i; j++) {
+    for (i = 0; i < odds - 1; i++) {
+        for (j = 0; j < odds - 1 - i; j++) {
             if (odd[j + 1] > odd[j]) {
                 odd[j + 1] ^= odd[j];
                 odd[j] ^= odd[j + 1];
@@ -38,10 +40,11 @@ int main() {
             }
         }
     }
-    for (int j = 0; j < odds; j++) {
+
+    for (j = 0; j < odds; j++) {
         printf("%d ", odd[j]);
     }
-    for (int i = 0; i < evens; i++) {
+    for (i = 0; i < evens; i++) {
         printf("%d ", even[i]);
     }
 

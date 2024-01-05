@@ -10,7 +10,7 @@ int main() {
     dp[0] = 1;
     dp[1] = x;
     for (int i = 2; i <= n; ++i) {
-        dp[i] = ((2 * n - 1) * x * dp[i - 1] - (n - 1) * dp[i - 2]) / n;
+        dp[i] = ((2 * i - 1) * x * dp[i - 1] - (i - 1) * dp[i - 2]) / i;
     }
 
     double sum = 0;

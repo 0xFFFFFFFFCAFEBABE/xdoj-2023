@@ -4,6 +4,7 @@
 #include <cctype>
 
 int main() {
+    int i;
     char C;
     int n;
     scanf("%c %d", &C, &n);
@@ -14,7 +15,7 @@ int main() {
     size_t len = strlen(buf);
 
     int sum = 0;
-    for (int i = 0; i < len; ++i) {
+    for (i = 0; i < len; ++i) {
         if (n == 1 && buf[i] == C) {
             sum++;
         }
